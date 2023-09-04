@@ -1,3 +1,17 @@
+# Relevant stuff for Rods
+
+## setup
+1) have forge installed
+2) get an Etherscan API key
+3) for CHAIN_TO_DEPLOY_ON, 11155111 is Sepolia testnet, 1 is mainnet
+4) run `forge install && make build`
+
+## important scripts
+`make build` compiles contracts
+`make test` runs unit tests
+`make deploy-contract-mainnet` deploys to mainnet
+`make deploy-contract-testnet` deploys to testnet
+
 # Llama Forge Template
 
 This template is inspired by [Cleanunicorn's template](https://github.com/cleanunicorn/ethereum-smartcontract-template).
