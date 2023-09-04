@@ -19,7 +19,7 @@ contract Rods is ERC721URIStorage, AccessControl {
     bytes32 public constant ADMIN_ROLE = keccak256("ADMIN_ROLE");
 
     /// @dev total number of NFTs minted, as the tokenIds are set by minter
-    uint256 totalCount;
+    uint256 public totalCount;
 
     /// @dev holds all minted assets for now
     address public CUSTODIAL_WALLET;
@@ -41,6 +41,7 @@ contract Rods is ERC721URIStorage, AccessControl {
         _setupRole(ADMIN_ROLE, _adminWallet);
     }
 
+    // @dev this is just needed for it to compile
     function supportsInterface(bytes4 interfaceId) public view virtual override(ERC721, AccessControl) returns (bool) {
         return super.supportsInterface(interfaceId);
     }

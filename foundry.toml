@@ -12,3 +12,4 @@ solc = '0.8.15'
 
 [rpc_endpoints]
 mainnet = "${RPC_MAINNET_URL}"
+testnet = "${RPC_TESTNET_URL}"

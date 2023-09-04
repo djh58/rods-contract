@@ -13,25 +13,19 @@ contract DeployContract is Script {
     function run() external {
         uint256 chainId = vm.envUint("CHAIN_TO_DEPLOY_ON");
         vm.startBroadcast();
-        // if (chainId == 1) {
-        //     jackpot = new Jackpot(
-        //         MainnetDeployConfig.KEY_HASH,
-        //         MainnetDeployConfig.CALLBACK_GAS_LIMIT,
-        //         MainnetDeployConfig.SUBSCRIPTION_ID,
-        //         MainnetDeployConfig.REQUEST_CONFIRMATIONS,
-        //         MainnetDeployConfig.VRF_COORDINATOR
-        //     );
-        // } else if (chainId == 5) {
-        //     jackpot = new Jackpot(
-        //         TestnetDeployConfig.KEY_HASH,
-        //         TestnetDeployConfig.CALLBACK_GAS_LIMIT,
-        //         TestnetDeployConfig.SUBSCRIPTION_ID,
-        //         TestnetDeployConfig.REQUEST_CONFIRMATIONS,
-        //         TestnetDeployConfig.VRF_COORDINATOR
-        //     );
-        // } else {
-        //     revert("Unsupported chain");
-        // }
-        // vm.stopBroadcast();
+        if (chainId == 1) {
+            rods = new Rods(
+                MainnetDeployConfig.admin,
+                MainnetDeployConfig.custodial
+            );
+        } else if (chainId == 11155111) {
+            rods = new Rods(
+                TestnetDeployConfig.admin,
+                TestnetDeployConfig.custodial
+            );
+        } else {
+            revert("Unsupported chain");
+        }
+        vm.stopBroadcast();
     }
 }
