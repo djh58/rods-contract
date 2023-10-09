@@ -2,6 +2,6 @@
 pragma solidity ^0.8.15;
 
 library TestnetDeployConfig {
-    address constant admin = 0xf9eB74aa206a55CAdfAf4C605eC6D3E39Fc59cf4;
-    address constant custodial = 0x2D6da51ea7409b9B3F59ba62313ac1F4Cb44B249;
+    address constant admin = 0xa385d9495d32540F21C8a9Bd0149e60888b9eADD;
+    address constant custodial = 0xa385d9495d32540F21C8a9Bd0149e60888b9eADD;
 }
