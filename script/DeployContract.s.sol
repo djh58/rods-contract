@@ -13,7 +13,7 @@ contract DeployContract is Script {
     function run() external {
         uint256 chainId = vm.envUint("CHAIN_TO_DEPLOY_ON");
         vm.startBroadcast();
-        if (chainId == 1) {
+        if (chainId == 8453) {
             rods = new Rods(
                 MainnetDeployConfig.admin,
                 MainnetDeployConfig.custodial

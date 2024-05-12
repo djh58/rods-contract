@@ -2,6 +2,6 @@
 pragma solidity ^0.8.15;
 
 library MainnetDeployConfig {
-    address constant admin = 0xf9eB74aa206a55CAdfAf4C605eC6D3E39Fc59cf4;
-    address constant custodial = 0x2D6da51ea7409b9B3F59ba62313ac1F4Cb44B249;
+    address constant admin = 0xcC568F9259d88C8c64c3F7ac84835a604FAe6DE8;
+    address constant custodial = 0xcC568F9259d88C8c64c3F7ac84835a604FAe6DE8;
 }
